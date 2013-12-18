@@ -1,0 +1,1981 @@
+@echo off
+title USEFUL Beta 1.7.1 // By Gage "YoZo" Smith - Chaotix Studios and Development
+cls
+color 0B
+echo ==============================================
+echo          / / / /_______  / __/_  __/ /
+echo         / / / / ___/ _ \/ /_/ / / / / 
+echo        / /_/ (__  )  __/ __/ /_/ / /  
+echo        \____/____/\___/_/  \____/_/ 
+echo               Useful Beta v.1.7.1
+echo ==============================================
+echo          = Loading, Please Wait... =
+echo.
+ping localhost -n 3 >nul
+cls
+
+
+:sectionA
+if exist useful_systematics.dll (
+if exist useful_data.dll (
+goto login
+)) else goto Reg
+:Reg
+color 0C
+echo ==============================================
+echo          / / / /_______  / __/_  __/ /
+echo         / / / / ___/ _ \/ /_/ / / / / 
+echo        / /_/ (__  )  __/ __/ /_/ / /  
+echo        \____/____/\___/_/  \____/_/ 
+echo               Useful Beta v.1.7.1
+echo ==============================================
+echo               REGISTERATION
+echo               =============
+echo.
+set /p U=Username: 
+set /p P=Password: 
+echo %P%>useful_data.dll
+echo %U%>useful_systematics.dll
+Echo Registeration Complete!
+pause
+goto sectionA
+:login
+cls
+color 05
+echo ==============================================
+echo          / / / /_______  / __/_  __/ /
+echo         / / / / ___/ _ \/ /_/ / / / / 
+echo        / /_/ (__  )  __/ __/ /_/ / /  
+echo        \____/____/\___/_/  \____/_/ 
+echo               Useful Beta v.1.7.1
+echo ==============================================
+setlocal
+set User2=
+for /f "tokens=*" %%a in ('type useful_systematics.dll 2^>NUL') do set User2=%%a
+set Pass2=
+for /f "tokens=*" %%a in ('type useful_data.dll 2^>NUL') do set Pass2=%%a
+:Loginp2
+cls
+color 0A
+echo ==============================================
+echo          / / / /_______  / __/_  __/ /
+echo         / / / / ___/ _ \/ /_/ / / / / 
+echo        / /_/ (__  )  __/ __/ /_/ / /  
+echo        \____/____/\___/_/  \____/_/ 
+echo               Useful Beta v.1.7.1
+echo ==============================================
+echo Log in
+echo.
+set /p user= Username: 
+set /p pass= Password: 
+if /i %user% equ %User2% ( 
+if /i %pass% equ %Pass2% (
+goto logload
+)
+) else goto incorrect
+:incorrect
+cls
+color 04
+echo ----------------------------------------------
+echo ----------------------------------------------
+echo      #     #
+echo       #   #
+echo        # #
+echo         #       Password Incorrect
+echo        # #
+echo       #   #
+echo      #     #
+echo ----------------------------------------------
+echo ----------------------------------------------
+echo.
+Echo Press any key to try again.
+echo.
+Pause
+goto Login
+:logload
+cls
+color 0E
+echo          Logging in...
+echo          ===================================
+echo          ===================================
+echo.                              Please Wait...
+echo.
+ping localhost -n 4 >nul
+goto correct
+:correct
+cls
+color 0A
+echo ----------------------------------------------
+echo ----------------------------------------------
+echo.
+echo               #
+echo             #
+echo     #     #            Login Successful
+echo      #  #
+echo       #
+echo.
+echo ----------------------------------------------
+echo ----------------------------------------------
+pause
+goto sectionB
+
+
+
+
+
+:sectionB
+:home menu
+cls
+color 06
+echo ==============================================
+echo          / / / /_______  / __/_  __/ /
+echo         / / / / ___/ _ \/ /_/ / / / / 
+echo        / /_/ (__  )  __/ __/ /_/ / /  
+echo        \____/____/\___/_/  \____/_/ 
+echo               Useful Beta v.1.7.1
+echo ==============================================
+echo Home Menu
+echo =========
+echo 1. Begin
+echo 2. Help (Coming Soon.)
+echo 3. About
+echo 4. Exit
+echo.
+set /p home=What do you want to do?
+if %home%==1 goto begin
+if %home%==2 goto help menu
+if %home%==3 goto about
+if %home%==4 goto exit
+
+
+:begin
+cls
+Color 0D
+echo ==============================================
+echo          / / / /_______  / __/_  __/ /
+echo         / / / / ___/ _ \/ /_/ / / / / 
+echo        / /_/ (__  )  __/ __/ /_/ / /  
+echo        \____/____/\___/_/  \____/_/ 
+echo               Useful Beta v.1.7.1
+echo ==============================================
+echo.
+echo Begin Menu
+echo ==========
+echo 1. Begin Program
+echo 2. Help Menu (Coming Soon)
+echo 3. Home Menu
+echo 4. Exit
+set /p begin= Where Do You Want to Go?
+if %begin%==1 goto program menu
+if %begin%==2 goto help menu
+if %begin%==3 goto home menu
+if %begin%==4 goto exit
+
+
+
+:program menu
+cls
+color 0F
+echo ==============================================
+echo          / / / /_______  / __/_  __/ /
+echo         / / / / ___/ _ \/ /_/ / / / / 
+echo        / /_/ (__  )  __/ __/ /_/ / /  
+echo        \____/____/\___/_/  \____/_/ 
+echo               Useful Beta v.1.7.1
+echo ==============================================
+echo USEFUL MENU
+echo ===========
+echo 1. Encrypter
+echo.
+echo 2. Decrypter
+echo.
+echo 3. Password Gen
+echo.
+echo 4. Internet Config
+echo.
+echo 5. Browser Cleaner
+echo.
+echo 6. DoS
+echo.
+echo 7. Resource Usage
+echo.
+echo 8. Mini Games
+echo.
+set /p useprogram= What Program Do You Want to Launch?
+if %useprogram%==1 goto Encrypter
+if %useprogram%==2 goto Decrypter
+if %useprogram%==3 goto Password Gen
+if %useprogram%==4 goto Internet Config
+if %useprogram%==5 goto Browser Cleaner
+if %useprogram%==6 goto DoS
+if %useprogram%==7 goto Resource Usage
+if %useprogram%==8 goto Mini Games
+
+
+
+:encrypter
+cls
+color 0A
+echo ==============================================
+echo          / / / /_______  / __/_  __/ /
+echo         / / / / ___/ _ \/ /_/ / / / / 
+echo        / /_/ (__  )  __/ __/ /_/ / /  
+echo        \____/____/\___/_/  \____/_/ 
+echo               Useful Beta v.1.7.1
+echo ==============================================
+echo           Text Encrypter v.1.3.2
+echo THIS WILL ALSO SEND ALL ENCRYPTIONS TO ENCRYPT.TXT IN .EXE LOCATION.
+echo.
+@echo off
+setlocal enableDelayedExpansion
+
+set /p inputcode=Code:
+set /p code=Text:
+set chars=0123456789abcdefghijklmnopqrstuvwxyz
+
+for /L %%N in (10 1 36) do (
+
+for /F %%C in ("!chars:~%%N,1!") do (
+
+set /a MATH=%%N*%inputcode%
+
+for /F %%F in ("!MATH!") do (
+set "code=!code:%%C=-%%F!"
+)
+)
+)
+echo !code!
+echo !code! > ENCRYPTED.txt
+pause
+goto PEM Menu
+
+
+
+:decrypter
+cls
+color 0A
+echo ==============================================
+echo          / / / /_______  / __/_  __/ /
+echo         / / / / ___/ _ \/ /_/ / / / / 
+echo        / /_/ (__  )  __/ __/ /_/ / /  
+echo        \____/____/\___/_/  \____/_/ 
+echo               Useful Beta v.1.7.1
+echo ==============================================
+echo          Text DeEncrypter v.1.0.0
+echo NOTE: This will ONLY De-Encrypt USEFUL brand Encryptions.
+echo THIS WILL ALSO SEND ALL DECRYPTIONS TO DECRYPT.TXT IN .EXE LOCATION.
+
+@echo off
+setlocal enableDelayedExpansion
+ 
+set /p inputcode=Code:
+set /p code=Text:
+set chars=0123456789abcdefghijklmnopqrstuvwxyz
+ 
+for /L %%N in (10 1 36) do (
+ 
+for /F %%C in ("!chars:~%%N,1!") do (
+ 
+set /a MATH=%%N*%inputcode%
+ 
+for /F %%F in ("!MATH!") do (
+set "code=!code:%%F=%%C!" 
+)
+ 
+)
+ 
+)
+ 
+for /f %%F in ("!code!") do (
+ 
+set "code=!code:-=!" 
+ 
+)
+ 
+ 
+echo !code! > DECRYPT.txt
+echo !code!
+pause
+goto PEM Menu
+
+
+
+:pem menu
+cls
+cls
+color 0A
+echo ==============================================
+echo          / / / /_______  / __/_  __/ /
+echo         / / / / ___/ _ \/ /_/ / / / / 
+echo        / /_/ (__  )  __/ __/ /_/ / /  
+echo        \____/____/\___/_/  \____/_/ 
+echo               Useful Beta v.1.7.1
+echo ==============================================
+color 02
+echo.
+echo Post-Encrypted/DeEncrypted Menu
+echo ===============================
+echo 1. Useful
+echo 2. Encrypter
+echo 3. Decrypter
+echo 4. Program Menu
+echo 5. Home Menu
+set /p PEM= What would you like to do now?
+if %PEM%==1 goto begin program
+if %PEM%==2 goto Encrypter
+if %PEM%==3 goto Decrypter
+if %PEM%==4 goto Program Menu
+if %PEM%==5 goto Home Menu
+
+
+
+:mini games
+cls
+color 0A
+echo ==============================================
+echo          / / / /_______  / __/_  __/ /
+echo         / / / / ___/ _ \/ /_/ / / / / 
+echo        / /_/ (__  )  __/ __/ /_/ / /  
+echo        \____/____/\___/_/  \____/_/ 
+echo               Useful Beta v.1.7.1
+echo ==============================================
+echo.
+echo Mini Games Menu
+echo ===============
+echo 1. BatchCraft
+echo 2. Baseball
+echo 3. Number Games
+echo 4. Cowboys
+echo 5. Dice
+echo.
+echo Utilities Menu
+echo ==============
+echo 6. Home Menu
+echo 7. Program Menu
+set /p GAME= What Game do you Want to Play?
+if %GAME%==1 goto BatchCraft
+if %GAME%==2 goto Baseball
+if %GAME%==3 goto Number Games
+if %GAME%==4 goto Cowboys
+if %GAME%==5 goto Dice
+if %GAME%==6 goto Home Menu
+if %GAME%==7 goto Program Menu
+
+
+
+
+
+:dice
+cls
+
+@echo off
+color 02
+echo ==============================================
+echo          / / / /_______  / __/_  __/ /
+echo         / / / / ___/ _ \/ /_/ / / / / 
+echo        / /_/ (__  )  __/ __/ /_/ / /  
+echo        \____/____/\___/_/  \____/_/ 
+echo               Useful Beta v.1.7.1
+echo ==============================================
+
+
+:moneyammt
+set /a roll=0
+echo.
+echo.
+echo How much money do you have?
+echo (Please put whole number. ex. 10,000,000 but with no commas)
+echo.
+set /p money=
+
+
+:menu
+color 1f
+cls
+echo.
+echo.
+echo Choose a type of game.
+echo.
+echo 1) Dicing
+echo 2) Flower game
+echo 3) Duelling
+echo.
+echo 4) Instructions
+echo 5) Exit
+echo.
+set /p mcho=
+if %mcho% EQU 1 goto dicemenu
+if %mcho% EQU 2 goto flowergame
+if %mcho% EQU 3 goto duels
+if %mcho% EQU 4 goto instruct
+if %mcho% EQU 5 exit
+
+
+:dicemenu
+color 0a
+cls
+echo.
+echo.
+echo 1) Regular Dicing
+echo 2) Dice Duels
+echo.
+echo 3) Back to menu
+echo 4) Exit
+echo.
+set /p dmenucho=
+if %dmenucho% EQU 1 goto regdicemenu
+if %dmenucho% EQU 2 goto duels
+if %dmenucho% EQU 3 goto menu
+if %dmenucho% EQU 4 exit
+
+
+:regdicemenu
+cls
+echo.
+echo Choose a type of dicing.
+echo.
+echo.
+echo 1) 50x2
+echo 2) 55x2
+echo 3) 60x2
+echo.
+echo 4) Go back
+echo.
+set /p dicetype=
+if %dicetype% EQU 1 goto 50x2
+if %dicetype% EQU 2 goto 55x2
+if %dicetype% EQU 3 goto 60x2
+if %dicetype% EQU 4 goto dicemenu
+
+
+:50x2
+cls
+echo			       ******** 50x2 ********
+echo.
+echo.
+echo Money: $%money%		Roll: %roll%
+echo.
+echo How much would you like to dice?
+echo.
+set /p bet=
+if %bet% LEQ %money% goto moneycheckcomplete50x2
+if %bet% GTR %money% goto nomoney50x2
+
+
+:moneycheckcomplete50x2
+set /a money=%money%-%bet%
+echo Bet $%bet%. Money decreased by $%bet% to $%money%. 
+echo Press any key to roll the dice.
+pause>nil
+goto roll50x2
+
+
+:roll50x2
+set /a roll=%random%*100/32767+1
+goto game250x2
+
+
+:game250x2
+cls
+echo			       ******** 50x2 ********
+echo.
+echo.
+echo Money: $%money%		Roll: %roll%
+echo.
+if %roll% GEQ 50 goto win50x2
+if %roll% LSS 50 goto lose50x2
+
+
+:win50x2
+set /a moneygain=%bet%*2
+set /a money=%moneygain%+%money%
+echo.
+echo Congratulations the roll was %roll%!
+echo.
+echo You bet $%bet% so you gain $%moneygain%!
+echo.
+pause
+goto 50x2
+
+
+:lose50x2
+echo.
+echo You lost! Sorry.
+echo.
+pause
+goto 50x2
+
+
+:nomoney50x2
+echo.
+echo You do not have enough money. 
+echo Would you like to change your bet? (y/n)
+set /p changebet=
+if %changebet% EQU y goto 50x2
+if %changebet% EQU n goto menu
+
+
+
+
+:55x2
+cls
+echo			       ******** 55x2 ********
+echo.
+echo.
+echo Money: $%money%		Roll: %roll%
+echo.
+echo How much would you like to dice?
+echo.
+set /p bet=
+if %bet% LEQ %money% goto moneycheckcomplete55x2
+if %bet% GTR %money% goto nomoney55x2
+
+
+:moneycheckcomplete55x2
+set /a money=%money%-%bet%
+echo Bet $%bet%. Money decreased by $%bet% to $%money%. 
+echo Press any key to roll the dice.
+pause>nil
+goto roll55x2
+
+
+:roll55x2
+set /a roll=%random%*100/32767+1
+goto game255x2
+
+
+:game255x2
+cls
+echo			       ******** 55x2 ********
+echo.
+echo.
+echo Money: $%money%		Roll: %roll%
+echo.
+if %roll% GEQ 55 goto win55x2
+if %roll% LSS 55 goto lose55x2
+
+
+:win55x2
+set /a moneygain=%bet%*2
+set /a money=%moneygain%+%money%
+echo.
+echo Congratulations the roll was %roll%!
+echo.
+echo You bet $%bet% so you gain $%moneygain%!
+echo.
+pause
+goto 55x2
+
+
+:lose55x2
+echo.
+echo You lost! Sorry.
+echo.
+pause
+goto 55x2
+
+
+:nomoney55x2
+echo.
+echo You do not have enough money. 
+echo Would you like to change your bet? (y/n)
+set /p changebet=
+if %changebet% EQU y goto 55x2
+if %changebet% EQU n goto menu
+
+
+
+
+
+:60x2
+cls
+echo			       ******** 60x2 ********
+echo.
+echo.
+echo Money: $%money%		Roll: %roll%
+echo.
+echo How much would you like to dice?
+echo.
+set /p bet=
+if %bet% LEQ %money% goto moneycheckcomplete60x2
+if %bet% GTR %money% goto nomoney60x2
+
+
+:moneycheckcomplete60x2
+set /a money=%money%-%bet%
+echo Bet $%bet%. Money decreased by $%bet% to $%money%. 
+echo Press any key to roll the dice.
+pause>nil
+goto roll60x2
+
+
+:roll60x2
+set /a roll=%random%*100/32767+1
+goto game260x2
+
+
+:game260x2
+cls
+echo			       ******** 60x2 ********
+echo.
+echo.
+echo Money: $%money%		Roll: %roll%
+echo.
+if %roll% GEQ 60 goto win60x2
+if %roll% LSS 60 goto lose60x2
+
+
+:win60x2
+set /a moneygain=%bet%*2
+set /a money=%moneygain%+%money%
+echo.
+echo Congratulations the roll was %roll%!
+echo.
+echo You bet $%bet% so you gain $%moneygain%!
+echo.
+pause
+goto 60x2
+
+
+:lose60x2
+echo.
+echo You lost! Sorry.
+echo.
+pause
+goto 60x2
+
+
+:nomoney60x2
+echo.
+echo You do not have enough money. 
+echo Would you like to change your bet? (y/n)
+set /p changebet=
+if %changebet% EQU y goto 60x2
+if %changebet% EQU n goto menu
+goto mini games
+
+:cowboys
+@echo off
+title Cowboys
+
+:menu1
+color 0b
+cls
+set /a wins=0
+set /a loss=0
+set /a ties=0
+set /a ammo=0
+set /a opammo=0
+echo.
+echo.
+echo Press any key to start the game.
+pause>nil
+echo.
+
+
+:game
+color 0b
+cls
+echo.
+echo.
+echo       Wins: %wins%
+echo     Losses: %loss%
+echo       Ties: %ties%
+echo.
+echo  Your Ammo: %ammo%
+echo CPU's Ammo: %opammo%
+echo.
+echo.
+echo Choose:
+echo.
+echo 1) Defend
+echo 2) Reload
+echo 3) Shoot
+echo.
+set /p choice=
+
+
+:cpuchoice
+set /a v=%random%*3/32767+1
+if %v% EQU 1 goto defend
+if %v% EQU 2 goto reload
+if %v% EQU 3 goto shoot
+goto cpuchoice
+
+
+:defend
+if %choice% EQU 1 goto defenddefend
+if %choice% EQU 2 goto reloaddefend
+if %choice% EQU 3 goto shootdefend
+
+:reload
+if %choice% EQU 1 goto defendreload
+if %choice% EQU 2 goto reloadreload
+if %choice% EQU 3 goto shootreload
+
+:shoot
+if %choice% EQU 1 goto defendshoot
+if %choice% EQU 2 goto reloadshoot
+if %choice% EQU 3 goto shootshoot
+
+
+
+:defenddefend
+color 0e
+cls
+set /a ties=%ties%+1
+echo.
+echo.
+echo I chose defend and you chose defend.
+echo.
+echo Are you serious? We tied!?
+echo.
+echo.
+pause
+goto game
+
+:reloaddefend
+color 0e
+cls
+set /a ties=%ties%+1
+set /a ammo=%ammo%+1
+echo.
+echo.
+echo I chose defend and you chose reload.
+echo.
+echo Well, I guess we'll have to do that again.
+echo.
+echo.
+pause
+goto game
+
+:shootdefend
+if %ammo% GEQ 1 goto shootdefend1
+if %ammo% EQU 0 goto noammo
+
+:shootdefend1
+color 0e
+cls
+set /a ties=%ties%+1
+set /a ammo=%ammo%-1
+echo.
+echo.
+echo I chose defend and you chose shoot.
+echo.
+echo Haha, I have blocked your attack!
+echo.
+echo.
+pause
+goto game
+
+
+:defendreload
+color 0e
+cls
+set /a ties=%ties%+1
+set /a opammo=%opammo%+1
+echo.
+echo.
+echo I chose reload and you chose defend.
+echo.
+echo Haha, now I have one more bullet then you.
+echo.
+echo.
+pause
+goto game
+
+:reloadreload
+color 0e
+cls
+set /a ties=%ties%+1
+set /a ammo=%ammo%+1
+set /a opammo=%opammo%+1
+echo.
+echo.
+echo I chose reload and you chose reload.
+echo.
+echo Now we both have more ammo!
+echo.
+echo.
+pause
+goto game
+
+:shootreload
+if %ammo% GEQ 1 goto shootreload1
+if %ammo% EQU 0 goto noammo
+
+:shootreload1
+color 0a
+cls
+set /a wins=%wins%+1
+set /a ammo=%ammo%-1
+set /a opammo=0
+echo.
+echo.
+echo I chose reload and you chose shoot.
+echo.
+echo WHAT! YOU BEAT ME!!!!!
+echo.
+echo.
+pause
+goto game
+
+:defendshoot
+if %opammo% GEQ 1 goto defendshoot1
+if %opammo% EQU 0 goto cpuchoice
+
+:defendshoot1
+color 0e
+cls
+set /a ties=%ties%+1
+set /a opammo=%opammo%-1
+echo.
+echo.
+echo I chose shoot and you chose defend.
+echo.
+echo How did you outsmart me!?
+echo.
+echo.
+pause
+goto game
+
+:reloadshoot
+if %opammo% GEQ 1 goto reloadshoot1
+if %opammo% EQU 0 goto cpuchoice
+
+:reloadshoot1
+color 0c
+cls
+set /a loss=%loss%+1
+set /a opammo=%opammo%-1
+set /a ammo=0
+echo.
+echo.
+echo I chose shoot and you chose reload.
+echo.
+echo FINALLY!!! I HAVE WON!!!!
+echo.
+echo.
+pause
+goto game
+
+:shootshoot
+if %opammo% GEQ 1 goto shootshoot1
+if %opammo% EQU 0 goto cpuchoice
+
+:shootshoot1
+if %ammo% GEQ 1 goto shootshoot2
+if %ammo% EQU 0 goto noammo
+
+:shootshoot2
+set /a ammo=0
+set /a opammo=0
+color 0e
+cls
+echo.
+echo.
+echo I chose shoot and you chose shoot.
+echo.
+echo X_X
+echo.
+echo.
+pause
+goto game
+
+
+:noammo
+echo.
+echo.
+echo You do not have enough ammo to shoot!
+echo.
+echo.
+pause
+goto mini games
+
+
+
+:number games
+@echo off
+color 0a
+title Number Guessing Game v2.0 
+
+:titlescreen
+cls
+echo.
+echo.
+echo.
+echo.
+echo                ****************************************************
+echo                                NUMBER GUESSING GAME!              
+echo                ****************************************************
+echo							
+echo.
+echo.
+echo.
+echo Press any key to start the game.
+pause>nul
+
+
+:startscreen
+cls
+echo                ****************************************************
+echo                                NUMBER GUESSING GAME!              
+echo                ****************************************************
+echo							
+echo.
+echo.
+echo 1) Start Guessing!
+echo 2) Instructions
+echo 3) Quit
+echo.
+
+set /p titlechoice=
+if %titlechoice% EQU 1 goto chooselevel
+if %titlechoice% EQU 2 goto instruct
+if %titlechoice% EQU 3 goto quit
+
+
+:chooselevel
+cls
+echo                ****************************************************
+echo                                NUMBER GUESSING GAME!              
+echo                ****************************************************
+echo							
+echo.
+echo.
+echo Please choose a level, or type "menu" to go back to the menu main.
+echo.
+echo.
+echo 1) Easy: Try to guess the number 1-100
+echo.
+echo 2) Medium: Try to guess the number 1-500
+echo.
+echo 3) Hard: Try to guess the number 1-1000
+echo.
+
+set /p levelselect=
+if %levelselect% EQU 1 goto easy
+if %levelselect% EQU 2 goto medium
+if %levelselect% EQU 3 goto hard
+if %levelselect% EQU menu goto startscreen
+
+
+:easy
+cls
+echo.
+echo.
+echo.
+echo.
+echo                ****************************************************
+echo.
+echo                            Try to guess the number 1-100        
+echo.  
+echo                ****************************************************
+echo.
+echo.
+echo.
+echo.
+echo What is your guess?
+echo.
+
+
+:easynumset
+set /a guess=1
+set /a num=%random%*99/32767+1
+
+
+:easyg
+set /p g2=
+If %g2% LSS 1 goto moron
+If %g2% GTR 100 goto moron
+IF %g2% LSS %num% goto H
+IF %g2% GTR %num% goto L
+If %g2% EQU %num% goto end
+
+
+:medium
+cls
+echo.
+echo.
+echo.
+echo.
+echo                ****************************************************
+echo.
+echo                            Try to guess the number 1-500        
+echo.  
+echo                ****************************************************
+echo.
+echo.
+echo.
+echo.
+echo What is your guess?
+echo.
+
+
+:mednumset
+set /a guess=1
+set /a num=%random%*499/32767+1
+
+
+:medg
+set /p g2=
+If %g2% LSS 1 goto moron2
+If %g2% GTR 500 goto moron2
+IF %g2% LSS %num% goto H2
+IF %g2% GTR %num% goto L2
+If %g2% EQU %num% goto end
+
+
+:hard
+cls
+echo.
+echo.
+echo.
+echo.
+echo                ****************************************************
+echo.
+echo                            Try to guess the number 1-1000          
+echo.
+echo                ****************************************************
+echo.
+echo.
+echo.
+echo.
+echo What is your guess?
+echo.
+
+
+:hardnumset
+set /a guess=1
+set /a num=%random%*999/32767+1
+
+
+:hardg
+set /p g2=
+If %g2% LSS 1 goto moron3
+If %g2% GTR 1000 goto moron3
+IF %g2% LSS %num% goto H3
+IF %g2% GTR %num% goto L3
+If %g2% EQU %num% goto end
+
+
+:moron
+Echo.
+Echo That's not between 1 and 100! Try again.
+Echo.
+set /a guess=%guess%+1
+goto easyg
+
+
+:H
+echo.
+echo Higher!
+echo.
+set /a guess=%guess%+1
+goto easyg
+
+
+:L
+echo.
+echo Lower!
+echo.
+set /a guess=%guess%+1
+goto easyg
+
+
+:moron2
+Echo.
+Echo That's not between 1 and 500! Try again.
+Echo.
+set /a guess=%guess%+1
+goto medg
+
+
+:H2
+Echo.
+Echo Higher!
+Echo.
+set /a guess=%guess%+1
+goto medg
+
+
+:L2
+Echo.
+Echo Lower!
+Echo.
+set /a guess=%guess%+1
+goto medg
+
+
+:moron3
+Echo.
+Echo That's not between 1 and 1000! Try again.
+Echo.
+set /a guess=%guess%+1
+goto hardg
+
+
+:H3
+Echo.
+Echo Higher!
+Echo.
+set /a guess=%guess%+1
+goto hardg
+
+
+:L3
+Echo.
+Echo Lower!
+Echo.
+set /a guess=%guess%+1
+goto hardg
+
+
+:end
+
+:S
+cls
+if %guess% EQU 1 goto G
+if %guess% GTR 5 goto s1
+Echo.
+Echo                        ********************************
+Echo.
+Echo                                     You Win!  
+Echo                                My Number was %num%.
+Echo.
+Echo                              It took you %guess% tries.
+Echo                                You're a Genius!
+Echo.
+Echo                        ********************************
+Echo.
+Echo.
+echo Press any key to return to the menu main.
+pause>nul
+goto :blah
+
+
+:s1
+cls
+if %guess% GTR 10 goto s2
+Echo.
+Echo                        ********************************
+Echo.
+Echo                                     You Win!  
+Echo                                My Number was %num%.
+Echo.
+Echo                              It took you %guess% tries.
+Echo                              You almost didn't suck.
+Echo.
+Echo                        ********************************
+Echo.
+Echo.
+echo Press any key to return to the menu main.
+pause>nul
+goto :blah
+
+
+
+:s2
+cls
+if %guess% GTR 15 goto s3
+Echo.
+Echo                        ********************************
+Echo.
+Echo                                     You Win!  
+Echo                                My Number was %num%.
+Echo.
+Echo                              It took you %guess% tries.
+Echo                                    You suck.
+Echo.     
+Echo                        ********************************
+Echo.
+Echo.
+echo Press any key to return to the menu main.
+pause>nul
+goto :blah
+
+
+:s3
+cls
+if %guess% GTR 20 goto s4
+Echo.
+Echo                        ********************************
+Echo.
+Echo                                     You Win!  
+Echo                                My Number was %num%.
+Echo.
+Echo                              It took you %guess% tries.
+Echo                                Please try again.
+Echo.
+Echo                        ********************************
+Echo.
+Echo.
+echo Press any key to return to the menu main.
+pause>nul
+goto :blah
+
+
+:s4
+cls
+Echo.
+Echo                        ********************************
+Echo.
+Echo                                     You Win!  
+Echo                                My Number was %num%.
+Echo.
+Echo                              It took you %guess% tries.
+Echo                                You fail at life.
+Echo.
+Echo                        ********************************
+Echo.
+Echo.
+echo Press any key to return to the menu main.
+pause>nul
+goto :blah
+
+:G
+cls
+Echo.
+Echo                        ********************************
+Echo.
+Echo                                    You Win!  
+Echo                                My Number was %num%.
+Echo.
+Echo                               It took you 1 try.
+Echo                                 You're a Baws!
+Echo.
+Echo                        ********************************
+Echo.
+Echo.
+pause
+goto mini games
+
+
+
+:instruct
+cls
+echo                ****************************************************
+echo                                    Instructions                   
+echo                ****************************************************
+echo.
+echo This game is simple. Simlpy guess the number that you think is correct, and 
+echo press enter!
+echo.
+echo.
+echo Easy is a number between 1 and 100.
+echo.
+echo Medium is a number between 1 and 500.
+echo.
+echo Hard is a number between 1 and 1000.
+echo.
+echo.
+echo Press any key to return to the menu main.
+pause>nul
+goto startscreen
+
+
+:blah
+goto startscreen
+
+:quit
+goto mini games
+
+
+:baseball
+@echo off
+color 0b
+title Baseball 
+
+
+:main
+set /a outs=0
+set /a balls=0
+set /a strikes=0
+set /a errors=0
+set /a inning=1
+set /a ROB=0
+set ph=Pitch
+set var=Top
+set /a team1runs=0
+set /a team2runs=0
+echo.
+echo.
+echo Press any key to start.
+pause>nil
+goto teamnaming
+
+
+:Top
+set /a outs=0
+set var=Bottom
+set ph=Hit
+set /a ROB=0
+goto game
+
+:Bottom
+set /a outs=0
+set /a ROB=0
+set /a inning=%inning%+1
+set ph=Pitch
+set var=Top
+goto checkinning
+
+
+:checkinning
+if %inning% GTR 9 goto endgame
+if %inning% LEQ 9 goto game
+
+
+:teamnaming
+cls
+echo.
+echo What is the name of your team?
+echo.
+set /p team1name=
+cls
+echo.
+echo Pick a pitcher to play for the %team1name%.
+echo.
+echo.
+echo What is the pitcher's name?
+echo.
+set /p pitchername=
+cls
+echo.
+echo Pick a catcher to play for the %team1name%.
+echo.
+echo.
+echo What is the catcher's name?
+echo.
+set /p catchername=
+cls
+echo.
+echo Pick a first baseman to play for the %team1name%.
+echo.
+echo.
+echo What is the first baseman's name?
+echo.
+set /p firstbasename=
+cls
+echo.
+echo Pick a second baseman to play for the %team1name%.
+echo.
+echo.
+echo What is the second baseman's name?
+echo.
+set /p secondbasename=
+cls
+echo.
+echo Pick a shortstop to play for the %team1name%.
+echo.
+echo.
+echo What is the shortstop's name?
+echo.
+set /p shortstopname=
+cls
+echo.
+echo Pick a third baseman to play for the %team1name%.
+echo.
+echo.
+echo What is the third baseman's name?
+echo.
+set /p thirdbasename=
+cls
+echo.
+echo Pick a left fielder to play for the %team1name%.
+echo.
+echo.
+echo What is the left fielder's name?
+echo.
+set /p leftfieldname=
+cls
+echo.
+echo Pick a center fielder to play for the %team1name%.
+echo.
+echo.
+echo What is the center fielder's name?
+echo.
+set /p centerfieldname=
+cls
+echo.
+echo Pick a right fielder to play for the %team1name%.
+echo.
+echo.
+echo What is the right fielder's name?
+echo.
+set /p rightfieldname=
+
+
+
+:game
+if %outs% EQU 3 goto %var%
+if %ROB% EQU 4 goto teamscore
+if %balls% EQU 4 goto walk
+if %strikes% EQU 3 goto strikeout
+cls
+echo.
+echo                          The %team1name% vs The Computers!
+echo.
+echo Inning: %var% %inning%
+echo.
+echo Batting: %pitchername%
+echo On Deck: %catchername%
+echo.
+echo %team1name% Runs: %team1runs%
+echo Computers Runs: %team2runs%
+echo.
+echo Balls: %balls%   Strikes: %strikes%   Outs: %outs%   Runners on: %ROB%
+echo.
+echo.
+echo How would you like to %ph%?
+echo.
+if %var% EQU Top goto selectpitch
+if %var% EQU Bottom goto selecthit
+
+
+:selectpitch
+echo 1) Fastball   2) Changeup   3) Curveball   4) Slider
+echo.
+set /p pitchchoice=
+if %pitchchoice% EQU 1 goto fastball
+if %pitchchoice% EQU 2 goto changeup
+if %pitchchoice% EQU 3 goto curveball
+if %pitchchoice% EQU 4 goto slider
+
+
+:selecthit
+echo 1) Bunt   2) Grounder   3) Line Drive   4) Power Hit
+echo.
+set /p hitchoice=
+if %hitchoice% EQU 1 goto bunt
+if %hitchoice% EQU 2 goto grounder
+if %hitchoice% EQU 3 goto linedrive
+if %hitchoice% EQU 4 goto power
+
+
+:fastball
+set /a BOS=%random%*2/32767+1
+if %BOS% EQU 1 goto ball
+if %BOS% EQU 2 goto strike
+echo.
+echo You threw a fastball!
+pause
+goto game
+
+:changeup
+set /a BOS=%random%*2/32767+1
+if %BOS% EQU 1 goto ball
+if %BOS% EQU 2 goto strike
+
+
+:curveball
+set /a BOS=%random%*2/32767+1
+if %BOS% EQU 1 goto ball
+if %BOS% EQU 2 goto strike
+
+
+:slider
+set /a BOS=%random%*2/32767+1
+if %BOS% EQU 1 goto ball
+if %BOS% EQU 2 goto strike
+
+
+
+:bunt
+set /a BOS=%random%*4/32767+1
+if %BOS% EQU 1 goto hit
+if %BOS% EQU 2 goto out
+if %BOS% EQU 3 goto miss
+if %BOS% EQU 4 goto hit
+
+:grounder
+set /a BOS=%random%*4/32767+1
+if %BOS% EQU 1 goto hit
+if %BOS% EQU 2 goto out
+if %BOS% EQU 3 goto miss
+if %BOS% EQU 4 goto hit
+
+:linedrive
+set /a BOS=%random%*4/32767+1
+if %BOS% EQU 1 goto hit
+if %BOS% EQU 2 goto out
+if %BOS% EQU 3 goto miss
+if %BOS% EQU 4 goto hit
+
+:power
+set /a BOS=%random%*4/32767+1
+if %BOS% EQU 1 goto hit
+if %BOS% EQU 2 goto out
+if %BOS% EQU 3 goto miss
+if %BOS% EQU 4 goto hit
+
+
+:miss
+set /a strikes=%strikes%+1
+echo.
+echo You missed the ball!
+echo.
+pause
+goto game
+
+
+:hit
+set /a ROB=%ROB%+1
+set /a balls=0
+set /a strikes=0
+echo.
+echo You hit the ball and got on base!
+echo.
+pause
+goto game
+
+
+:out
+set /a outs=%outs%+1
+set /a balls=0
+set /a strikes=0
+echo.
+echo You hit the ball, but you got out.
+echo.
+pause
+goto game
+
+
+:ball
+set /a balls=%balls%+1
+echo.
+echo It was a ball!
+echo.
+pause
+goto game
+
+
+:strike
+set /a strikes=%strikes%+1
+echo.
+echo It was a strike!
+echo.
+pause
+goto game
+
+
+:teamscore
+if %var% EQU Top goto cpuscore
+if %var% EQU Bottom goto youscore
+goto game
+
+
+:cpuscore
+set /a team2runs=%team2runs%+1
+set /a ROB=%ROB%-1
+echo.
+echo The Computers have scored!
+echo.
+pause
+goto game
+
+
+:youscore
+set /a team1runs=%team1runs%+1
+set /a ROB=%ROB%-1
+echo.
+echo The %team1name% have scored!
+echo.
+pause
+goto game
+
+
+:walk
+set /a ROB=%ROB%+1
+set /a balls=0
+set /a strikes=0
+goto game
+
+
+:strikeout
+set /a outs=%outs%+1
+set /a balls=0
+set /a strikes=0
+goto game
+
+
+:endgame
+echo.
+echo The game is now over!
+echo.
+pause
+goto mini games
+
+
+
+:batchcraft
+@echo off
+setlocal enabledelayedexpansion
+set stat0=0
+:emptylevel
+for /l %%g in (0,1,639) do set b%%g= 
+set loc_y=7
+set loc_x=19
+set /a ptr_l=%loc_y%*40+%loc_x%
+set b%ptr_l%=X
+set face=3
+:render
+cls
+echo  ÍÍÍÍÍÍ Batchcraft - Minecraft in 2D on a Batch File ÍÍÍÍÍÍ v0.8
+echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo º%b0%%b1%%b2%%b3%%b4%%b5%%b6%%b7%%b8%%b9%%b10%%b11%%b12%%b13%%b14%%b15%%b16%%b17%%b18%%b19%%b20%%b21%%b22%%b23%%b24%%b25%%b26%%b27%%b28%%b29%%b30%%b31%%b32%%b33%%b34%%b35%%b36%%b37%%b38%%b39%º
+for /l %%f in (4,4,63) do (
+	set pob=%%f
+	set /a poc=%%f+1
+	set /a pod=%%f+2
+	set /a poe=%%f+3
+	for /f "tokens=1,2,3,4" %%g in ("!pob! !poc! !pod! !poe!") do echo º!b%%g0!!b%%g1!!b%%g2!!b%%g3!!b%%g4!!b%%g5!!b%%g6!!b%%g7!!b%%g8!!b%%g9!!b%%h0!!b%%h1!!b%%h2!!b%%h3!!b%%h4!!b%%h5!!b%%h6!!b%%h7!!b%%h8!!b%%h9!!b%%i0!!b%%i1!!b%%i2!!b%%i3!!b%%i4!!b%%i5!!b%%i6!!b%%i7!!b%%i8!!b%%i9!!b%%j0!!b%%j1!!b%%j2!!b%%j3!!b%%j4!!b%%j5!!b%%j6!!b%%j7!!b%%j8!!b%%j9!º
+	)
+
+
+echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+:controls
+if %stat0%==0 set stat0text=False
+if %stat0%==1 set stat0text=True
+if %face%==0 set facetext=South
+if %face%==1 set facetext=West
+if %face%==2 set facetext=North
+if %face%==3 set facetext=East
+echo X=%loc_x%  Y=%loc_y%  Pos=%ptr_l%  Facing: %facetext%
+echo a - Left   d - Right    j - Break Block
+echo w - Up     s - Down     k - Place Block
+echo n - Restart level       l - Turn before moving - %stat0text%
+choice /c adwsjknl >nul
+:lwjgl0
+if %errorlevel% GTR 4 goto lwjgl1
+set facelast==%face%
+if %errorlevel%==1 set face=1
+if %errorlevel%==2 set face=3
+if %errorlevel%==3 set face=2
+if %errorlevel%==4 set face=0
+if %stat0%==1 if %facelast% NEQ %face% goto render
+set action=move
+goto move
+:lwjgl1
+if %errorlevel%==5 set action=blockbreak
+if %errorlevel%==6 set action=blockplace
+if %errorlevel%==7 goto emptylevel
+if %errorlevel%==8 goto togglemove
+goto interact
+:togglemove
+if %stat0%==0 (
+	set stat0=1
+	goto render)
+	if %stat0%==1 (
+	set stat0=0
+	goto render)
+:interact
+set ptr_last=%ptr_l%
+set loc_ym=%loc_y%
+set loc_xm=%loc_x%
+if %face%==0 set /a loc_ym+=1
+if %face%==1 set /a loc_xm-=1
+if %face%==2 set /a loc_ym-=1
+if %face%==3 set /a loc_xm+=1
+if %loc_ym% GTR 15 goto render
+if %loc_ym% LSS 0 goto render
+if %loc_xm% GTR 19 goto render
+if %loc_xm% LSS 0 goto render
+set /a ptr_m=%loc_ym%*40+%loc_xm%
+if %action%==blockbreak set b%ptr_m%= 
+if %action%==blockplace set b%ptr_m%=#
+goto render
+set loc_ym=%loc_y%
+set loc_xm=%loc_x%
+set /a ptr_l=%loc_y%*40+%loc_x%
+if %face%==0 set /a loc_y-=1
+if %face%==1 set /a loc_x+=1
+if %face%==2 set /a loc_y+=1
+if %face%==3 set /a loc_x-=1
+pause
+echo off
+goto render
+:move
+set ptr_last=%ptr_l%
+set loc_ym=%loc_y%
+set loc_xm=%loc_x%
+if %face%==0 set /a loc_ym+=1
+if %face%==1 set /a loc_xm-=1
+if %face%==2 set /a loc_ym-=1
+if %face%==3 set /a loc_xm+=1
+set /a ptr_m=%loc_ym%*40+%loc_xm%
+
+if "!b%ptr_m%!"=="#" goto render
+if %loc_ym% GTR 15 goto render
+if %loc_ym% LSS 0 goto render
+if %loc_xm% GTR 39 goto render
+if %loc_xm% LSS 0 goto render
+:legalmove
+set loc_y=%loc_ym%
+set loc_x=%loc_xm%
+set /a ptr_l=%loc_y%*40+%loc_x%
+set b%ptr_l%=X
+set b%ptr_last%= 
+goto program menu
+
+
+
+
+:password gen
+@echo off
+:Start2
+cls
+goto Start
+:Start
+color 02
+echo Welcome to USEFUL Password Gen. v.0.10. 
+echo By Sonny "MellowCream" Antonelli, Chaotix Studios
+echo Please write down your password, incase you forget.
+echo If a password is too short, put two together!
+echo ================================================== 
+echo 1) 1 Random Password
+echo 2) 5 Random Passwords
+echo 3) 10 Random Passwords
+echo Input your choice
+set input=
+set /p input= Choice:
+if %input%==1 goto A if NOT goto Start2
+if %input%==2 goto B if NOT goto Start2
+if %input%==3 goto C if NOT goto Start2
+:A
+color 03
+cls
+echo Your password is %random%
+echo Now choose what you want to do.
+echo 1) Go back to the beginning
+echo 2) Useful Menu
+echo 3) Exit
+set input=
+set /p input= Choice:
+if %input%==1 goto Start2 if NOT goto Start 2
+if %input%==2 goto Program Menu if NOT goto Start 2
+if %input%==3 goto Exit
+:Exit
+exit
+:B
+color 04
+cls
+echo Your 5 passwords are %random%, %random%, %random%, %random%, %random%.
+echo Now choose what you want to do.
+echo 1) Go back to the beginning
+echo 2) Useful Menu
+echo 3) Exit
+set input=
+set /p input= Choice:
+if %input%==1 goto Start2 if NOT goto Start 2
+if %input%==2 goto Program Menu if NOT goto Start 2
+if %input%==3 goto Exit
+:C
+color 05
+cls
+echo Your 10 Passwords are %random%, %random%, %random%, %random%, %random%, %random%, %random%, %random%, %random%, %random%
+echo Now choose what you want to do.
+echo 1) Go back to the beginning
+echo 2) Useful Menu
+echo 3) Exit
+set input=
+set /p input= Choice:
+if %input%==1 goto Start2 if NOT goto Start 2
+if %input%==2 goto Program Menu if NOT goto Start 2
+if %input%==3 goto Exit
+
+
+
+
+:internet config
+cls
+color 07
+echo Press any key to display your internet settings.
+pause
+ipconfig
+echo Press any key to go back to the Useful Menu.
+pause
+goto Program Menu
+
+
+
+
+:browser cleaner
+color 04
+cls
+echo WARNING: This will delete ALL history, cookies, and cache. If you want to keep ANY of these, DO NOT run this program!
+pause
+cls
+echo Select your browser.
+echo ====================
+echo 1)Internet Explorer
+echo 2)Mozilla Firefox
+echo 3)Google Chrome
+echo 4)Apple Safari
+echo 5)Opera
+echo 6)Clean Flash Cookies
+echo.
+echo Or go back to...
+echo ================
+echo 7)Useful
+set input=
+set /p input=Your Browser/Choice:
+if %inpute%==1 goto internet explorer
+if %inpute%==2 goto mozilla firefox
+if %inpute%==3 goto google chrome
+if %inpute%==4 goto apple safari
+if %inpute%==5 goto opera
+if %inpute%==6 goto flash cookies
+if %inpute%==7 goto program menu
+
+
+
+
+:internet explorer
+color 01
+cls
+@echo off
+
+set DataDir=C:\Users\%USERNAME%\AppData\Local\Microsoft\Intern~1
+
+del /q /s /f "%DataDir%"
+rd /s /q "%DataDir%"
+
+set History=C:\Users\%USERNAME%\AppData\Local\Microsoft\Windows\History
+
+del /q /s /f "%History%"
+rd /s /q "%History%"
+
+set IETemp=C:\Users\%USERNAME%\AppData\Local\Microsoft\Windows\Tempor~1
+
+del /q /s /f "%IETemp%"
+rd /s /q "%IETemp%"
+
+set Cookies=C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Cookies
+
+del /q /s /f "%Cookies%"
+rd /s /q "%Cookies%"
+
+:mozilla firefox
+color 04
+cls
+@echo off
+
+set DataDir=C:\Users\%USERNAME%\AppData\Local\Mozilla\Firefox\Profiles
+
+del /q /s /f "%DataDir%"
+rd /s /q "%DataDir%"
+
+for /d %%x in (C:\Users\%USERNAME%\AppData\Roaming\Mozilla\Firefox\Profiles\*) do del /q /s /f %%x\*sqlite
+
+:google chrome
+color 02
+cls
+@echo off
+
+set ChromeDir=C:\Users\%USERNAME%\AppData\Local\Google\Chrome\User Data
+
+del /q /s /f "%ChromeDir%"
+rd /s /q "%ChromeDir%"
+
+:opera
+color 04
+cls
+@echo off
+
+set DataDir=C:\Users\%USERNAME%\AppData\Local\Opera\Opera
+set DataDir2=C:\Users\%USERNAME%\AppData\Roaming\Opera\Opera
+
+del /q /s /f "%DataDir%"
+rd /s /q "%DataDir%"
+
+del /q /s /f "%DataDir2%"
+rd /s /q "%DataDir2%"
+
+:apple safari
+color 03
+cls
+@echo off
+
+set DataDir=C:\Users\%USERNAME%\AppData\Local\Applec~1\Safari
+set DataDir2=C:\Users\%USERNAME%\AppData\Roaming\Applec~1\Safari
+
+del /q /s /f "%DataDir%\History"
+rd /s /q "%DataDir%\History"
+
+del /q /s /f "%DataDir%\Cache.db"
+del /q /s /f "%DataDir%\WebpageIcons.db"
+
+del /q /s /f "%DataDir2%"
+rd /s /q "%DataDir2%"
+
+:flash cookies
+color 07
+cls
+@echo off
+
+set FlashCookies=C:\Users\%USERNAME%\AppData\Roaming\Macromedia\Flashp~1
+
+del /q /s /f "%FlashCookies%"
+rd /s /q "%FlashCookies%"
+pause
+cls
+echo Post Clean Menu
+echo ===============
+echo 1) Useful
+echo 2) Home Menu
+echo 3) Browser Cleaner
+set /p cleanermenu=Where would you like to go now?
+if %cleanermenu%==1 goto program menu
+if %cleanermenu%==2 goto begin
+if %cleanermenu%==3 goto browser cleaner
+
+:dos
+color 03
+cls
+set /p inputcode=IP:
+pause
+cls
+ping %inputcode% -t -l 65500
+
+
+
+
+:resource usage
+cls
+Color 02
+echo ==============================================
+echo          / / / /_______  / __/_  __/ /
+echo         / / / / ___/ _ \/ /_/ / / / / 
+echo        / /_/ (__  )  __/ __/ /_/ / /  
+echo        \____/____/\___/_/  \____/_/ 
+echo               Useful Beta v.1.7.1
+echo ==============================================
+echo.
+echo This tool will display which programs take up how much memory.
+pause
+cls
+tasklist
+pause
+cls
+echo ==============================================
+echo          / / / /_______  / __/_  __/ /
+echo         / / / / ___/ _ \/ /_/ / / / / 
+echo        / /_/ (__  )  __/ __/ /_/ / /  
+echo        \____/____/\___/_/  \____/_/ 
+echo               Useful Beta v.1.7.1
+echo ==============================================
+echo.
+echo 1) Useful
+echo 2) Home Menu
+echo 3) Resource Usage
+echo NOTE: Use this for a refresh-like feature.
+echo.
+set /p usagemenu=Where do you want to go now?
+if %usagemenu%==1 goto program menu
+if %usagemenu%==2 goto begin
+of %usagemenu%==3 goto resource usage
+
+
+:help 
+PAUSE
